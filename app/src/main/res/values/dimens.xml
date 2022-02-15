@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Parents -->
+    <dimen name="padding">16dp</dimen>
+    <dimen name="margin">12dp</dimen>
+    <dimen name="margin_horizontal">35dp</dimen>
+    <dimen name="elevation_image">8dp</dimen>
+
+    <!-- Card -->
+    <dimen name="cv_border_small">4dp</dimen>
+    <dimen name="cv_border_normal">8dp</dimen>
+    <dimen name="cv_border_large">12dp</dimen>
+    <dimen name="cv_elevation">2dp</dimen>
+    <dimen name="cv_padding">6dp</dimen>
+    <dimen name="cv_padding_large">12dp</dimen>
+    <dimen name="cv_margin_horizontal">5dp</dimen>
+    <dimen name="cv_margin_horizontal_detail">30dp</dimen>
+    <dimen name="cv_margin_vertical">4dp</dimen>
+    <dimen name="cv_margin_vertical_large">8dp</dimen>
+    <dimen name="cv_margin_vertical_detail">120dp</dimen>
+
+</resources>

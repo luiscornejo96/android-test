@@ -1,0 +1,37 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Test" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/accent</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/gray</item>
+        <item name="colorSecondaryVariant">@color/background</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <!-- Cards -->
+    <style name="CardViewStyle" parent="CardView">
+        <item name="android:layout_marginStart">@dimen/cv_margin_horizontal</item>
+        <item name="android:layout_marginEnd">@dimen/cv_margin_horizontal</item>
+        <item name="android:layout_marginTop">@dimen/cv_margin_vertical</item>
+        <item name="android:elevation">@dimen/cv_elevation</item>
+        <item name="cardCornerRadius">@dimen/cv_border_normal</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:padding">@dimen/padding</item>
+        <item name="android:foreground">?selectableItemBackground</item>
+    </style>|
+
+    <!-- Shapes -->
+    <style name="Circular">
+        <item name="cornerSize">50%</item>
+    </style>
+
+
+</resources>
