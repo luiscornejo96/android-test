@@ -1,4 +1,16 @@
 <resources>
     <string name="app_name">Test</string>
     <string name="lb_title_user_data">USER DATA</string>
+    <string name="lb_title_name">NAME</string>
+    <string name="lb_title_registered">REGISTERED</string>
+    <string name="lb_title_cell">CELL</string>
+    <string name="lb_body_password">********</string>
+    <string name="lb_title_password">PASSWORD</string>
+    <string name="lb_title_username">USERNAME</string>
+    <string name="lb_title_email">EMAIL</string>
+    <string name="lb_title_account_data">ACCOUNT DATA</string>
+    <string name="lb_title_day_of_birthday">DAY OF BIRTHDAY</string>
+    <string name="lb_title_address">ADDRESS</string>
+    <string name="lb_title_gender">GENDER</string>
+    <string name="lb_title_personal_information">PERSONAL INFORMATION</string>
 </resources>
