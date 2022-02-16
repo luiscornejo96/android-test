@@ -15,7 +15,7 @@ class MainActivityVM( app: Application): AndroidViewModel( app) {
     val data: LiveData<Response> = _data
 
     private val _isLoading = MutableLiveData<Boolean>().apply {
-        value = true
+        value = false
     }
     val isLoading: LiveData<Boolean> =  _isLoading
 

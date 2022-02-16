@@ -8,26 +8,21 @@
     <dimen name="elevation_image">8dp</dimen>
 
     <!-- Labels -->
-    <dimen name="lb_margin_vertical_small">4dp</dimen>
-    <dimen name="lb_margin_vertical">8dp</dimen>
-    <dimen name="lb_margin_vertical_large">12dp</dimen>
-    <dimen name="lb_padding_horizontal">4dp</dimen>
+    <dimen name="lb_small_vertical_margin">4dp</dimen>
+    <dimen name="lb_vertical_margin">8dp</dimen>
+    <dimen name="lb_large_vertical_margin">12dp</dimen>
+    <dimen name="lb_horizontal_padding">4dp</dimen>
 
     <!-- Image -->
     <dimen name="img_profile_size">128dp</dimen>
     <dimen name="img_large_icon">28dp</dimen>
     <dimen name="img_icon">24dp</dimen>
+    <dimen name="img_margin">6dp</dimen>
     <!-- Card -->
-    <dimen name="cv_border_small">4dp</dimen>
-    <dimen name="cv_border_normal">8dp</dimen>
-    <dimen name="cv_border_large">12dp</dimen>
-    <dimen name="cv_elevation">2dp</dimen>
+    <dimen name="cv_normal_border">8dp</dimen>
+    <dimen name="cv_elevation">6dp</dimen>
     <dimen name="cv_padding">6dp</dimen>
-    <dimen name="cv_padding_large">12dp</dimen>
-    <dimen name="cv_margin_horizontal">5dp</dimen>
-    <dimen name="cv_margin_horizontal_detail">30dp</dimen>
-    <dimen name="cv_margin_vertical">4dp</dimen>
-    <dimen name="cv_margin_vertical_large">8dp</dimen>
-    <dimen name="cv_margin_vertical_detail">120dp</dimen>
+    <dimen name="cv_large_horizontal_margin">10dp</dimen>
+    <dimen name="cv_vertical_margin">4dp</dimen>
 
 </resources>

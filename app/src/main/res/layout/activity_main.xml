@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewModel"
             type="com.luis.test.ui.activities.MainActivityVM" />
@@ -35,226 +36,237 @@
             <androidx.cardview.widget.CardView
                 style="@style/CardViewStyle"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:layout_marginTop="90dp"
-                android:elevation="@dimen/elevation_image"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <androidx.core.widget.NestedScrollView
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-                    <androidx.appcompat.widget.LinearLayoutCompat
+                    <ImageView
+                        android:id="@+id/img_reload_data"
+                        style="@style/Click"
+                        android:layout_width="@dimen/img_large_icon"
+                        android:layout_height="@dimen/img_large_icon"
+                        android:layout_gravity="end"
+                        android:layout_marginHorizontal="@dimen/img_margin"
+                        android:layout_marginVertical="@dimen/img_margin"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_reload" />
+
+                    <androidx.core.widget.NestedScrollView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/margin"
-                        android:gravity="start"
-                        android:orientation="vertical">
+                        android:layout_margin="@dimen/margin">
 
-                        <ImageView
-                            android:id="@+id/img_reload_data"
-                            style="@style/Click"
-                            android:layout_width="@dimen/img_large_icon"
-                            android:layout_height="@dimen/img_large_icon"
-                            android:layout_gravity="end"
-                            android:contentDescription="@string/app_name"
-                            android:src="@drawable/ic_reload" />
-
-                        <com.google.android.material.textview.MaterialTextView
-                            android:id="@+id/lb_title_personal_information"
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/ll_data"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/lb_margin_vertical"
-                            android:drawableEnd="@drawable/ic_person"
-                            android:drawableTint="@color/primary"
-                            android:gravity="center_vertical"
-                            android:paddingStart="@dimen/lb_padding_horizontal"
-                            android:paddingEnd="0dp"
-                            android:text="@string/lb_title_personal_information"
-                            android:textColor="@color/primary"
-                            android:textStyle="bold" />
+                            android:gravity="start"
+                            android:orientation="vertical">
 
-                        <View
-                            android:id="@+id/v_lb_personal_information"
-                            android:layout_width="match_parent"
-                            android:layout_height="2dp"
-                            android:background="@color/gray" />
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/lb_title_personal_information"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableEnd="@drawable/ic_person"
+                                android:drawableTint="@color/primary"
+                                android:gravity="center_vertical"
+                                android:paddingStart="@dimen/lb_horizontal_padding"
+                                android:paddingEnd="0dp"
+                                android:text="@string/lb_title_personal_information"
+                                android:textColor="@color/primary"
+                                android:textStyle="bold" />
 
-                        <com.google.android.material.textview.MaterialTextView
-                            android:id="@+id/lb_title_name"
-                            style="@style/Title1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/lb_margin_vertical_large"
-                            android:text="@string/lb_title_name" />
+                            <View
+                                android:id="@+id/v_lb_personal_information"
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="@color/gray" />
 
-                        <com.google.android.material.textview.MaterialTextView
-                            android:id="@+id/lb_body_name"
-                            style="@style/Body1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@{}" />
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/lb_title_name"
+                                style="@style/Title1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/lb_large_vertical_margin"
+                                android:text="@string/lb_title_name" />
 
-                        <com.google.android.material.textview.MaterialTextView
-                            android:id="@+id/lb_title_gender"
-                            style="@style/Title1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/lb_title_gender" />
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/lb_body_name"
+                                style="@style/Body1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@{}" />
 
-                        <com.google.android.material.textview.MaterialTextView
-                            android:id="@+id/lb_body_gender"
-                            style="@style/Body1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@{viewModel.data.results.get(0).gender}" />
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/lb_title_gender"
+                                style="@style/Title1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/lb_title_gender" />
 
-                        <com.google.android.material.textview.MaterialTextView
-                            android:id="@+id/lb_title_address"
-                            style="@style/Title1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/lb_title_address" />
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/lb_body_gender"
+                                style="@style/Body1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@{viewModel.data.results.get(0).gender}" />
 
-                        <com.google.android.material.textview.MaterialTextView
-                            android:id="@+id/lb_body_address"
-                            style="@style/Body1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@{}" />
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/lb_title_address"
+                                style="@style/Title1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/lb_title_address" />
 
-                        <com.google.android.material.textview.MaterialTextView
-                            android:id="@+id/lb_title_dob"
-                            style="@style/Title1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/lb_title_age" />
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/lb_body_address"
+                                style="@style/Body1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@{}" />
 
-                        <com.google.android.material.textview.MaterialTextView
-                            android:id="@+id/lb_body_dob"
-                            style="@style/Body1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@{viewModel.data.results.get(0).dob.age}" />
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/lb_title_dob"
+                                style="@style/Title1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/lb_title_age" />
 
-                        <com.google.android.material.textview.MaterialTextView
-                            android:id="@+id/lb_title_account_data"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/lb_margin_vertical"
-                            android:drawableEnd="@drawable/ic_email"
-                            android:drawableTint="@color/primary"
-                            android:gravity="center_vertical"
-                            android:paddingStart="@dimen/lb_padding_horizontal"
-                            android:paddingEnd="0dp"
-                            android:text="@string/lb_title_account_data"
-                            android:textColor="@color/primary"
-                            android:textStyle="bold" />
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/lb_body_dob"
+                                style="@style/Body1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@{String.valueOf( viewModel.data.results.get(0).dob.age)}" />
 
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="2dp"
-                            android:background="@color/gray" />
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/lb_title_account_data"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/lb_vertical_margin"
+                                android:drawableEnd="@drawable/ic_email"
+                                android:drawableTint="@color/primary"
+                                android:gravity="center_vertical"
+                                android:paddingStart="@dimen/lb_horizontal_padding"
+                                android:paddingEnd="0dp"
+                                android:text="@string/lb_title_account_data"
+                                android:textColor="@color/primary"
+                                android:textStyle="bold" />
 
-                        <com.google.android.material.textview.MaterialTextView
-                            android:id="@+id/lb_title_email"
-                            style="@style/Title1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/lb_margin_vertical_large"
-                            android:text="@string/lb_title_email" />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="@color/gray" />
 
-                        <com.google.android.material.textview.MaterialTextView
-                            android:id="@+id/lb_body_email"
-                            style="@style/Body1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@{viewModel.data.results.get(0).email}"/>
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/lb_title_email"
+                                style="@style/Title1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/lb_large_vertical_margin"
+                                android:text="@string/lb_title_email" />
 
-                        <com.google.android.material.textview.MaterialTextView
-                            android:id="@+id/lb_title_username"
-                            style="@style/Title1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/lb_margin_vertical_large"
-                            android:text="@string/lb_title_username" />
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/lb_body_email"
+                                style="@style/Body1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@{viewModel.data.results.get(0).email}" />
 
-                        <com.google.android.material.textview.MaterialTextView
-                            android:id="@+id/lb_body_username"
-                            style="@style/Body1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@{viewModel.data.results.get(0).login.username}"/>
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/lb_title_username"
+                                style="@style/Title1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/lb_large_vertical_margin"
+                                android:text="@string/lb_title_username" />
 
-                        <com.google.android.material.textview.MaterialTextView
-                            android:id="@+id/lb_title_password"
-                            style="@style/Title1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/lb_margin_vertical_large"
-                            android:text="@string/lb_title_password" />
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/lb_body_username"
+                                style="@style/Body1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@{viewModel.data.results.get(0).login.username}" />
 
-                        <com.google.android.material.textview.MaterialTextView
-                            android:id="@+id/lb_body_password"
-                            style="@style/Body1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/lb_body_password" />
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/lb_title_password"
+                                style="@style/Title1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/lb_large_vertical_margin"
+                                android:text="@string/lb_title_password" />
 
-                        <com.google.android.material.textview.MaterialTextView
-                            android:id="@+id/lb_title_cell"
-                            style="@style/Title1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/lb_margin_vertical_large"
-                            android:text="@string/lb_title_cell" />
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/lb_body_password"
+                                style="@style/Body1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/lb_body_password" />
 
-                        <com.google.android.material.textview.MaterialTextView
-                            android:id="@+id/lb_body_cell"
-                            style="@style/Body1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@{viewModel.data.results.get(0).cell}" />
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/lb_title_cell"
+                                style="@style/Title1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/lb_large_vertical_margin"
+                                android:text="@string/lb_title_cell" />
 
-                        <com.google.android.material.textview.MaterialTextView
-                            android:id="@+id/lb_title_phone"
-                            style="@style/Title1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/lb_margin_vertical_large"
-                            android:text="@string/lb_title_phone" />
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/lb_body_cell"
+                                style="@style/Body1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@{viewModel.data.results.get(0).cell}" />
 
-                        <com.google.android.material.textview.MaterialTextView
-                            android:id="@+id/lb_body_phone"
-                            style="@style/Body1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@{viewModel.data.results.get(0).phone}"/>
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/lb_title_phone"
+                                style="@style/Title1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/lb_large_vertical_margin"
+                                android:text="@string/lb_title_phone" />
 
-                        <com.google.android.material.textview.MaterialTextView
-                            android:id="@+id/lb_title_registered"
-                            style="@style/Title1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/lb_margin_vertical_large"
-                            android:text="@string/lb_title_registered" />
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/lb_body_phone"
+                                style="@style/Body1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@{viewModel.data.results.get(0).phone}" />
 
-                        <com.google.android.material.textview.MaterialTextView
-                            android:id="@+id/lb_body_registered"
-                            style="@style/Body1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@{viewModel.data.results.get(0).registered.date}"/>
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/lb_title_registered"
+                                style="@style/Title1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/lb_large_vertical_margin"
+                                android:text="@string/lb_title_registered" />
 
-                    </androidx.appcompat.widget.LinearLayoutCompat>
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/lb_body_registered"
+                                style="@style/Body1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@{viewModel.data.results.get(0).registered.date}" />
 
-                </androidx.core.widget.NestedScrollView>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </androidx.core.widget.NestedScrollView>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
             </androidx.cardview.widget.CardView>
 
             <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/img_profile"
                 android:layout_width="@dimen/img_profile_size"
                 android:layout_height="@dimen/img_profile_size"
                 android:elevation="4dp"

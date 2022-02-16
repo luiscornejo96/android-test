@@ -6,6 +6,9 @@ import retrofit2.http.GET
 
 interface ResponseApi {
 
+    /**
+     * GET Method, get a new random user from API
+     */
     @GET("/api/")
     fun getNewRandomUser(): Call<Response>
 }

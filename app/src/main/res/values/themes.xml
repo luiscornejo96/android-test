@@ -23,25 +23,25 @@
 
     <!-- Labels -->
     <style name="Title1" parent="Widget.MaterialComponents.TextView">
-        <item name="android:layout_marginTop">@dimen/lb_margin_vertical_small</item>
+        <item name="android:layout_marginTop">@dimen/lb_small_vertical_margin</item>
         <item name="android:textColor">@color/accent</item>
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">13sp</item>
         <item name="android:textStyle">bold</item>
     </style>
 
     <style name="Body1" parent="Widget.MaterialComponents.TextView">
         <item name="android:textColor">@color/gray</item>
-        <item name="android:textSize">12sp</item>
+        <item name="android:textSize">14sp</item>
     </style>
 
 
     <!-- Cards -->
     <style name="CardViewStyle" parent="CardView">
-        <item name="android:layout_marginStart">@dimen/cv_margin_horizontal</item>
-        <item name="android:layout_marginEnd">@dimen/cv_margin_horizontal</item>
-        <item name="android:layout_marginTop">@dimen/cv_margin_vertical</item>
+        <item name="android:layout_marginStart">@dimen/cv_large_horizontal_margin</item>
+        <item name="android:layout_marginEnd">@dimen/cv_large_horizontal_margin</item>
+        <item name="android:layout_marginTop">@dimen/cv_vertical_margin</item>
         <item name="android:elevation">@dimen/cv_elevation</item>
-        <item name="cardCornerRadius">@dimen/cv_border_normal</item>
+        <item name="cardCornerRadius">@dimen/cv_normal_border</item>
         <item name="android:background">@color/white</item>
         <item name="android:clickable">true</item>
         <item name="android:focusable">true</item>

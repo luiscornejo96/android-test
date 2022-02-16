@@ -15,28 +15,14 @@ class ResponseRepository {
 
     private val api: ResponseApi by lazy { ServiceGenerator.createService( ResponseApi::class.java)}
 
-
+    /**
+     * Get a sync response from API and handle it
+     */
     fun getNewRandomUserApi(): Response?{
-        var data: Response? = null
-        api.getNewRandomUser().enqueue( object: Callback<Response>{
-            override fun onResponse(call: Call<Response>, response: retrofit2.Response<Response>) {
-                data =
-                    if( response.isSuccessful) {
-                        response.body()
-                    }
-                    else
-                    {
-                        Log.e( TAG, "Error ->: ${response.errorBody().toString()}")
-                        null
-                    }
-            }
-
-            override fun onFailure(call: Call<Response>, t: Throwable) {
-                data = null
-                Log.e( TAG, "Error ->: $t")
-            }
-
-        })
-        return data
+       val data = api.getNewRandomUser()
+        data.execute().body()?.let {
+            Log.i( TAG, it.toString())
+            return it
+        }?: kotlin.run { return null }
     }
 }
