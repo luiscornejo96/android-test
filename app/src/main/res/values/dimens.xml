@@ -15,14 +15,22 @@
 
     <!-- Image -->
     <dimen name="img_profile_size">128dp</dimen>
+    <dimen name="img_profile_tablet_size">248dp</dimen>
+    <dimen name="img_large_tablet_icon">36dp</dimen>
     <dimen name="img_large_icon">28dp</dimen>
     <dimen name="img_icon">24dp</dimen>
     <dimen name="img_margin">6dp</dimen>
+
     <!-- Card -->
     <dimen name="cv_normal_border">8dp</dimen>
     <dimen name="cv_elevation">6dp</dimen>
     <dimen name="cv_padding">6dp</dimen>
     <dimen name="cv_large_horizontal_margin">10dp</dimen>
+    <dimen name="cv_tablet_horizontal_margin">100dp</dimen>
     <dimen name="cv_vertical_margin">4dp</dimen>
+    <dimen name="cv_large_vertical_margin">8dp</dimen>
+    <dimen name="cv_profile_top_margin">90dp</dimen>
+    <dimen name="cv_tablet_profile_top_margin">200dp</dimen>
+
 
 </resources>

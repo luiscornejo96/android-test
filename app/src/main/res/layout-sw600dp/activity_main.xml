@@ -36,10 +36,11 @@
             <androidx.cardview.widget.CardView
                 style="@style/CardViewStyle"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginTop="@dimen/cv_profile_top_margin"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/cv_tablet_horizontal_margin"
+                android:layout_marginTop="@dimen/cv_tablet_profile_top_margin"
+                android:layout_marginEnd="@dimen/cv_tablet_horizontal_margin"
                 android:layout_marginBottom="@dimen/cv_large_vertical_margin"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -52,8 +53,8 @@
                     <ImageView
                         android:id="@+id/img_reload_data"
                         style="@style/Click"
-                        android:layout_width="@dimen/img_large_icon"
-                        android:layout_height="@dimen/img_large_icon"
+                        android:layout_width="@dimen/img_large_tablet_icon"
+                        android:layout_height="@dimen/img_large_tablet_icon"
                         android:layout_gravity="end"
                         android:layout_marginHorizontal="@dimen/img_margin"
                         android:layout_marginVertical="@dimen/img_margin"
@@ -74,7 +75,7 @@
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:id="@+id/lb_title_personal_information"
-                                style="@style/Title2"
+                                style="@style/TabletTitle2"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableEnd="@drawable/ic_person"
@@ -88,7 +89,7 @@
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:id="@+id/lb_title_name"
-                                style="@style/Title1"
+                                style="@style/TabletTitle1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/lb_large_vertical_margin"
@@ -96,56 +97,56 @@
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:id="@+id/lb_body_name"
-                                style="@style/Body1"
+                                style="@style/TabletBody1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@{}" />
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:id="@+id/lb_title_gender"
-                                style="@style/Title1"
+                                style="@style/TabletTitle1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/lb_title_gender" />
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:id="@+id/lb_body_gender"
-                                style="@style/Body1"
+                                style="@style/TabletBody1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@{viewModel.data.results.get(0).gender}" />
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:id="@+id/lb_title_address"
-                                style="@style/Title1"
+                                style="@style/TabletTitle1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/lb_title_address" />
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:id="@+id/lb_body_address"
-                                style="@style/Body1"
+                                style="@style/TabletBody1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@{}" />
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:id="@+id/lb_title_dob"
-                                style="@style/Title1"
+                                style="@style/TabletTitle1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/lb_title_age" />
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:id="@+id/lb_body_dob"
-                                style="@style/Body1"
+                                style="@style/TabletBody1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@{String.valueOf( viewModel.data.results.get(0).dob.age)}" />
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:id="@+id/lb_title_account_data"
-                                style="@style/Title2"
+                                style="@style/TabletTitle2"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawableEnd="@drawable/ic_email"
@@ -158,7 +159,7 @@
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:id="@+id/lb_title_email"
-                                style="@style/Title1"
+                                style="@style/TabletTitle1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/lb_large_vertical_margin"
@@ -166,14 +167,14 @@
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:id="@+id/lb_body_email"
-                                style="@style/Body1"
+                                style="@style/TabletBody1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@{viewModel.data.results.get(0).email}" />
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:id="@+id/lb_title_username"
-                                style="@style/Title1"
+                                style="@style/TabletTitle1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/lb_large_vertical_margin"
@@ -181,14 +182,14 @@
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:id="@+id/lb_body_username"
-                                style="@style/Body1"
+                                style="@style/TabletBody1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@{viewModel.data.results.get(0).login.username}" />
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:id="@+id/lb_title_password"
-                                style="@style/Title1"
+                                style="@style/TabletTitle1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/lb_large_vertical_margin"
@@ -196,14 +197,14 @@
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:id="@+id/lb_body_password"
-                                style="@style/Body1"
+                                style="@style/TabletBody1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/lb_body_password" />
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:id="@+id/lb_title_cell"
-                                style="@style/Title1"
+                                style="@style/TabletTitle1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/lb_large_vertical_margin"
@@ -211,14 +212,14 @@
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:id="@+id/lb_body_cell"
-                                style="@style/Body1"
+                                style="@style/TabletBody1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@{viewModel.data.results.get(0).cell}" />
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:id="@+id/lb_title_phone"
-                                style="@style/Title1"
+                                style="@style/TabletTitle1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/lb_large_vertical_margin"
@@ -226,14 +227,14 @@
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:id="@+id/lb_body_phone"
-                                style="@style/Body1"
+                                style="@style/TabletBody1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@{viewModel.data.results.get(0).phone}" />
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:id="@+id/lb_title_registered"
-                                style="@style/Title1"
+                                style="@style/TabletTitle1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/lb_large_vertical_margin"
@@ -241,7 +242,7 @@
 
                             <com.google.android.material.textview.MaterialTextView
                                 android:id="@+id/lb_body_registered"
-                                style="@style/Body1"
+                                style="@style/TabletBody1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@{viewModel.data.results.get(0).registered.date}" />
@@ -256,8 +257,8 @@
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/img_profile"
-                android:layout_width="@dimen/img_profile_size"
-                android:layout_height="@dimen/img_profile_size"
+                android:layout_width="@dimen/img_profile_tablet_size"
+                android:layout_height="@dimen/img_profile_tablet_size"
                 android:elevation="4dp"
                 android:scaleType="centerCrop"
                 android:src="@mipmap/user_example"

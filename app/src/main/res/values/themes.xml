@@ -29,11 +29,41 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="Title2" parent="Widget.MaterialComponents.TextView">
+        <item name="android:drawableTint">@color/primary</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingStart">@dimen/lb_horizontal_padding</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
     <style name="Body1" parent="Widget.MaterialComponents.TextView">
         <item name="android:textColor">@color/gray</item>
         <item name="android:textSize">14sp</item>
     </style>
 
+    <style name="TabletTitle1" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_marginTop">@dimen/lb_small_vertical_margin</item>
+        <item name="android:textColor">@color/accent</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TabletTitle2" parent="Widget.MaterialComponents.TextView">
+        <item name="android:drawableTint">@color/primary</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">19sp</item>
+        <item name="android:paddingStart">@dimen/lb_horizontal_padding</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TabletBody1" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:textSize">19sp</item>
+    </style>
 
     <!-- Cards -->
     <style name="CardViewStyle" parent="CardView">
@@ -42,12 +72,12 @@
         <item name="android:layout_marginTop">@dimen/cv_vertical_margin</item>
         <item name="android:elevation">@dimen/cv_elevation</item>
         <item name="cardCornerRadius">@dimen/cv_normal_border</item>
-        <item name="android:background">@color/white</item>
+        <item name="android:background">@color/background</item>
         <item name="android:clickable">true</item>
         <item name="android:focusable">true</item>
         <item name="android:padding">@dimen/padding</item>
         <item name="android:foreground">?selectableItemBackground</item>
-    </style>|
+    </style>
 
     <!-- Shapes -->
     <style name="Circular">

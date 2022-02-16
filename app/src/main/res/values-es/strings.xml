@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Test</string>
+    <string name="lb_title_name">NOMBRE</string>
+    <string name="lb_title_registered">REGISTRADO</string>
+    <string name="lb_title_cell">CELULAR</string>
+    <string name="lb_body_password">********</string>
+    <string name="lb_title_password">CONTRASEÑA</string>
+    <string name="lb_title_username">NOMBRE DE USUARIO</string>
+    <string name="lb_title_email">CORREO</string>
+    <string name="lb_title_account_data">INFORMACIÓN DE CUENTA</string>
+    <string name="lb_title_address">DIRECCIÓN</string>
+    <string name="lb_title_gender">GÉNERO</string>
+    <string name="lb_title_personal_information">INFORMACIÓN PERSONAL</string>
+    <string name="lb_title_age">EDAD</string>
+    <string name="lb_title_phone">NÚMERO CASA</string>
+</resources>
