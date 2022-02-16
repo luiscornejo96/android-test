@@ -3,6 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="viewModel"
+            type="com.luis.test.ui.activities.MainActivityVM" />
+    </data>
+
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -103,7 +109,7 @@
                             style="@style/Body1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@{}" />
+                            android:text="@{viewModel.data.results.get(0).gender}" />
 
                         <com.google.android.material.textview.MaterialTextView
                             android:id="@+id/lb_title_address"
@@ -124,14 +130,14 @@
                             style="@style/Title1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/lb_title_day_of_birthday" />
+                            android:text="@string/lb_title_age" />
 
                         <com.google.android.material.textview.MaterialTextView
                             android:id="@+id/lb_body_dob"
                             style="@style/Body1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@{}" />
+                            android:text="@{viewModel.data.results.get(0).dob.age}" />
 
                         <com.google.android.material.textview.MaterialTextView
                             android:id="@+id/lb_title_account_data"
@@ -165,7 +171,7 @@
                             style="@style/Body1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@{}" />
+                            android:text="@{viewModel.data.results.get(0).email}"/>
 
                         <com.google.android.material.textview.MaterialTextView
                             android:id="@+id/lb_title_username"
@@ -180,7 +186,7 @@
                             style="@style/Body1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@{}" />
+                            android:text="@{viewModel.data.results.get(0).login.username}"/>
 
                         <com.google.android.material.textview.MaterialTextView
                             android:id="@+id/lb_title_password"
@@ -210,10 +216,25 @@
                             style="@style/Body1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@{}" />
+                            android:text="@{viewModel.data.results.get(0).cell}" />
 
                         <com.google.android.material.textview.MaterialTextView
-                            android:id="@+id/lb_title_registerd"
+                            android:id="@+id/lb_title_phone"
+                            style="@style/Title1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/lb_margin_vertical_large"
+                            android:text="@string/lb_title_phone" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/lb_body_phone"
+                            style="@style/Body1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@{viewModel.data.results.get(0).phone}"/>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/lb_title_registered"
                             style="@style/Title1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -225,7 +246,7 @@
                             style="@style/Body1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@{}" />
+                            android:text="@{viewModel.data.results.get(0).registered.date}"/>
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
 

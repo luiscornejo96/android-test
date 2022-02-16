@@ -13,4 +13,6 @@
     <string name="lb_title_address">ADDRESS</string>
     <string name="lb_title_gender">GENDER</string>
     <string name="lb_title_personal_information">PERSONAL INFORMATION</string>
+    <string name="lb_title_age">AGE</string>
+    <string name="lb_title_phone">PHONE</string>
 </resources>
